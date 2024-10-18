@@ -1,11 +1,9 @@
 package com.example.aufgabe3.ui.home
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -14,7 +12,6 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.aufgabe3.model.BookingEntry
 import com.example.aufgabe3.viewmodel.SharedViewModel
-import java.time.format.DateTimeFormatter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -43,28 +40,7 @@ fun HomeScreen(
                 .padding(innerPadding)
                 .fillMaxSize()
         ) {
-            if (bookingsEntries.isEmpty()) {
-                Text(
-                    text = "No booking entries available.",
-                    style = MaterialTheme.typography.bodyLarge,
-                    modifier = Modifier
-                        .padding(16.dp)
-                        .align(Alignment.CenterHorizontally)
-                )
-            } else {
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    items(bookingsEntries) { booking ->
-                        BookingEntryItem(
-                            booking = booking,
-                            onDeleteClick = {
-                                sharedViewModel.deleteBookingEntry(booking)
-                            }
-                        )
-                    }
-                }
-            }
+            // TODO inform the user if no bookingsEntries otherwise LazyColumn for bookingsEntries
         }
     }
 }
@@ -74,7 +50,6 @@ fun BookingEntryItem(
     booking: BookingEntry,
     onDeleteClick: () -> Unit
 ) {
-    val dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -89,11 +64,11 @@ fun BookingEntryItem(
                 modifier = Modifier.weight(1f)
             ) {
                 Text(
-                    text = booking.name,
+                    text = // TODO display booking name,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
-                    text = "${booking.arrivalDate.format(dateFormatter)} - ${booking.departureDate.format(dateFormatter)}",
+                    text = // TODO display date in right format,
                     style = MaterialTheme.typography.bodyMedium
                 )
             }
