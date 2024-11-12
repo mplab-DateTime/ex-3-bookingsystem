@@ -1,6 +1,6 @@
 # Bewertungsschema für die Programmieraufgabe
 
-**Gesamtpunktzahl: 20 Punkte**
+**Gesamtpunktzahl: 10 Punkte**
 
 ## Ziel der Aufgabe
 
@@ -22,63 +22,63 @@ beinhaltet:
 
 ## Bewertungskriterien und Punkteverteilung
 
-### 1. `BookingEntry.kt` (1,5 Punkte)
+### 1. `BookingEntry.kt` (0,75 Punkte)
 
-- **Korrekte Implementierung der Datenklasse** (1,5 Punkte)
+- **Korrekte Implementierung der Datenklasse** (0,75 Punkte)
 
     - Attribute:
-        - `arrivalDate` (0,5 Punkte): `LocalDate` oder entsprechender Typ zur Speicherung des
+        - `arrivalDate` (0,25 Punkte): `LocalDate` oder entsprechender Typ zur Speicherung des
           Ankunftsdatums.
-        - `departureDate` (0,5 Punkte): `LocalDate` oder entsprechender Typ zur Speicherung des
+        - `departureDate` (0,25 Punkte): `LocalDate` oder entsprechender Typ zur Speicherung des
           Abreisedatums.
-        - `name` (0,5 Punkte): `String` zur Speicherung des Namens der Buchung.
+        - `name` (0,25 Punkte): `String` zur Speicherung des Namens der Buchung.
 
-### 2. `AddScreen.kt` (9 Punkte)
+### 2. `AddScreen.kt` (4,5 Punkte)
 
-- **Implementierung des `DateRangePickerModal`** (5 Punkte)
+- **Implementierung des `DateRangePickerModal`** (2,5 Punkte)
 
-    - **Methode für den Dialog implementieren** (2 Punkte): Die Studierenden sollen die
+    - **Methode für den Dialog implementieren** (1 Punkte): Die Studierenden sollen die
       Methode `DateRangePickerModal` erstellen, die den Dialog zur Datumsauswahl anzeigt.
-    - **Logik zur Anzeige des Dialogs implementieren** (1,5 Punkte): Korrekte Integration des
+    - **Logik zur Anzeige des Dialogs implementieren** (0,75 Punkte): Korrekte Integration des
       Dialogs in den `AddScreen`, sodass der Dialog beim Klick auf das entsprechende Feld geöffnet
       wird.
-    - **Konvertierung der ausgewählten Long-Werte in `LocalDate`** (1,5 Punkte): Nach Auswahl eines
+    - **Konvertierung der ausgewählten Long-Werte in `LocalDate`** (0,75 Punkte): Nach Auswahl eines
       gültigen Zeitraums sollen die erhaltenen `Long`-Werte korrekt in `LocalDate` umgewandelt und
       in den entsprechenden Variablen gespeichert werden.
 
     - **Save-Button Funktionalität:**
 
-      - **Error Handling** (2 Punkte): Implementierung von Fehlermeldungen oder Validierungen, wenn
+      - **Error Handling** (1 Punkte): Implementierung von Fehlermeldungen oder Validierungen, wenn
         der Name nicht eingegeben wurde oder kein gültiges Datum ausgewählt wurde.
-        - **Erstellen und Speichern des `BookingEntry`-Objekts** (2 Punkte): Bei korrekten Eingaben soll
+        - **Erstellen und Speichern des `BookingEntry`-Objekts** (1 Punkte): Bei korrekten Eingaben soll
           ein neues `BookingEntry`-Objekt erstellt und im `SharedViewModel` gespeichert werden.
 
-- **Save-Button Funktionalität** (4 Punkte)
+- **Save-Button Funktionalität** (2 Punkte)
 
-    - Error Handling bei fehlendem Namen oder ungültigem Datum (2 Punkte)
+    - Error Handling bei fehlendem Namen oder ungültigem Datum (1 Punkte)
     - Erstellen und Speichern eines neuen `BookingEntry`-Objekts im `SharedViewModel`, wenn die
-      Eingaben korrekt sind (2 Punkte)
+      Eingaben korrekt sind (1 Punkte)
 
-### 3. `HomeScreen.kt` (6 Punkte)
+### 3. `HomeScreen.kt` (3 Punkte)
 
-- **Anzeige der Buchungseinträge** (3 Punkte)
+- **Anzeige der Buchungseinträge** (1,5 Punkte)
 
-    - **Verwendung von `LazyColumn`** (1,5 Punkte): Die Studierenden sollen die Buchungseinträge
+    - **Verwendung von `LazyColumn`** (0,75 Punkte): Die Studierenden sollen die Buchungseinträge
       mithilfe einer `LazyColumn` anzeigen, wenn die Liste `bookingsEntries` nicht leer ist.
-    - **Anzeige bei leerer Liste** (1,5 Punkte): Wenn keine Buchungseinträge vorhanden sind, soll
+    - **Anzeige bei leerer Liste** (0,75 Punkte): Wenn keine Buchungseinträge vorhanden sind, soll
       eine entsprechende Nachricht angezeigt werden.
 
-- **`BookingEntryItem` Composable** (3 Punkte)
+- **`BookingEntryItem` Composable** (1,5 Punkte)
 
-    - **Anzeige des Namens** (1,5 Punkte): Jeder Buchungseintrag soll den Namen korrekt anzeigen.
-    - **Anzeige des Datums im richtigen Format** (1,5 Punkte): Die Ankunfts- und Abreisedaten sollen
+    - **Anzeige des Namens** (0,75 Punkte): Jeder Buchungseintrag soll den Namen korrekt anzeigen.
+    - **Anzeige des Datums im richtigen Format** (0,75 Punkte): Die Ankunfts- und Abreisedaten sollen
       im Format `dd.MM.yyyy` angezeigt werden.
 
-### 4. `SharedViewModel.kt` (3,5 Punkte)
+### 4. `SharedViewModel.kt` (1,5 Punkte)
 
-- **`addBookingEntry`-Methode implementieren** (2 Punkte): Die Studierenden sollen die Methode
+- **`addBookingEntry`-Methode implementieren** (1 Punkte): Die Studierenden sollen die Methode
   vervollständigen, sodass neue Buchungseinträge zur Liste hinzugefügt werden können.
-- **`deleteBookingEntry`-Methode implementieren** (1,5 Punkte): Implementierung der Methode, um
+- **`deleteBookingEntry`-Methode implementieren** (0,75 Punkte): Implementierung der Methode, um
   Buchungseinträge aus der Liste entfernen zu können.
 
 ## Anmerkungen
@@ -117,16 +117,5 @@ beinhaltet:
       Komponenten zu konsultieren.
     - Bei Fragen können auch Online-Ressourcen und Foren hilfreich sein.
 
----
-
-## Notenschlüssel (zur Orientierung)
-
-- **Sehr gut (1,0):** 18 - 20 Punkte
-- **Gut (2,0):** 16 - 17,5 Punkte
-- **Befriedigend (3,0):** 14 - 15,5 Punkte
-- **Ausreichend (4,0):** 12 - 13,5 Punkte
-- **Nicht bestanden (5,0):** 0 - 11,5 Punkte
-
----
 
 **Viel Erfolg bei der Umsetzung der Aufgabe!**
