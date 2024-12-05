@@ -4,7 +4,7 @@
 
 ## Ziel der Aufgabe
 
-Die Studierenden sollen eine Android-App mit Jetpack Compose entwickeln, die folgende Funktionen beinhaltet:
+Es soll eine Android-App mit Jetpack Compose entwickeln, die folgende Funktionen beinhaltet:
 
 - **Verwendung von DateTimePicker und Kalenderkomponenten.**
 - **Ergänzung des bereitgestellten Codegerüsts.**
